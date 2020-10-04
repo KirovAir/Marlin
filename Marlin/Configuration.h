@@ -981,7 +981,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -41, -10, -10.68 } // Own measure: -40, -8 (maybe 9?)
+#define NOZZLE_TO_PROBE_OFFSET { -41, -10, -0.74 } // Own measure: -40, -8 (maybe 9?)
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1499,7 +1499,9 @@
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 185
+//#define PREHEAT_1_TEMP_HOTEND 200
 #define PREHEAT_1_TEMP_BED     45
+//#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
