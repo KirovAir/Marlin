@@ -1,0 +1,42 @@
+// Configuration.h
+#define SHOW_CUSTOM_BOOTSCREEN
+#define CUSTOM_STATUS_SCREEN_IMAGE
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 141.60 }
+
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+#define USE_PROBE_FOR_Z_HOMING
+
+#define BLTOUCH
+#define NOZZLE_TO_PROBE_OFFSET { -41, -10, -0.32 } // Own measure: -40, -8 (maybe 9?)
+
+#define PROBING_MARGIN 25 // Binder clips
+
+#define Z_MIN_PROBE_REPEATABILITY_TEST
+
+#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed
+
+#define AUTO_BED_LEVELING_BILINEAR
+//#define MESH_BED_LEVELING
+
+#define RESTORE_LEVELING_AFTER_G28
+
+#define Z_SAFE_HOMING
+
+// Configuration_adv.h
+  #define BLTOUCH_DELAY 500
+
+  #define BLTOUCH_FORCE_SW_MODE // 2 day fix lol
+  #define ASSISTED_TRAMMING
+
+  // Not sure if these values are needed at all.
+  //#define TRAMMING_POINT_XY { {  41, 41 }, { 194,  41 }, { 194, 194 }, { 41, 194 } }
+
+  #define TRAMMING_SCREW_THREAD 40
+
+  #define BABYSTEP_MULTIPLICATOR_Z  4       // (steps or mm) Steps or millimeter distance for each Z babystep
+
+  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
+    #define BABYSTEP_ZPROBE_GFX_OVERLAY   // Enable graphical overlay on Z-offset editor
+
+#define ARC_SUPPORT               // Disable this feature to save ~3226 bytes
